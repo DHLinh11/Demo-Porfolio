@@ -1,0 +1,119 @@
+:root {
+    box-sizing: border-box;
+}
+
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+* {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #0a0a1a, #121236);
+}
+
+@media screen and (max-width: 1024px) {
+
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+        jusify-content: center;
+    }
+
+    .btn-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(10, 10, 30, 0.8);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #8a2be2;
+    text-shadow: 0 0 10px #8a2be2, 0 0 20px rgba(138, 43, 226, 0.5);
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.link-bar {
+    display: flex;
+    gap: 2rem;
+}
+
+.link-bar a {
+    text-decoration: none;
+    color: rgb(132, 0, 255);
+    font-weight: bold;
+    font-size: large;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.link-bar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #8a2be2;
+    transition: width 0.3s ease;
+}
+
+.link-bar a.feartures {
+    color: aliceblue;
+}
+
+.link-bar a:hover {
+    color: antiquewhite;
+}
+
+.link-bar a:hover::after,
+.feartures {
+    width: 100%;
+}
+
+.btn-nav button {
+    background: linear-gradient(135deg, #6403c0, #7e47eb);
+    padding: 0.5rem 1rem;
+    border-radius: 24px;
+    border: none;
+    color: rgb(247, 237, 222);
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-nav button:hover {
+    transform: translateY(-1.5px);
+    box-shadow: 0 6px 20px rgba(138, 43, 226, 0.6);
+}
