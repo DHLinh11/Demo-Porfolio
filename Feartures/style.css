@@ -18,9 +18,11 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    /* height: 80vh; */
     width: 100%;
     background: linear-gradient(135deg, #0a0a1a, #121236);
+    margin-top: 2rem;
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -116,4 +118,117 @@ body {
 .btn-nav button:hover {
     transform: translateY(-1.5px);
     box-shadow: 0 6px 20px rgba(138, 43, 226, 0.6);
+}
+
+.container {
+    color: antiquewhite;
+    margin: 200px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container__descrip ul {
+    padding: 0;
+    font-size: 0.8rem;
+}
+
+.container__descrip {
+    padding: 1rem;
+    width: 50%;
+
+}
+
+.container__descrip li::first-letter {
+    font-size: 2.5rem;
+
+}
+
+.container__descrip li::after {
+    content: "";
+
+}
+
+.container__descrip li:hover::after {
+    content: " 👍👍👍";
+
+}
+
+.container__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+
+}
+
+.container__img {
+    width: 250px;
+    height: 400px;
+    background-repeat: repeat;
+    border-radius: 15px;
+}
+
+.img1 {
+    position: relative;
+    right: -10px;
+    width: 80%;
+    height: 80%;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 2px solid #6403c0;
+}
+
+.img1:hover {
+    box-shadow: 0 6px 30px blueviolet;
+    transition: all 0.3s ease;
+    scale: 1.1;
+
+}
+
+.img2 {
+    width: 60%;
+    height: 60%;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 2px solid #6403c0;
+
+}
+
+.img2:hover {
+    box-shadow: 0 6px 30px blueviolet;
+    transition: all 0.3s ease;
+    scale: 1.1;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.main-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.main-link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    width: 3em;
+    border: 1px solid rgba(138, 43, 226, 0.6);
+    border-radius: 50%;
+    backdrop-filter: blur (40%);
+    background-color: rgba(78, 79, 80, 0.315);
+    fill: #8a2be2;
+    transition: all 0.3s ease;
+}
+
+.main-link a:hover {
+    fill: aliceblue;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px #7e47eb;
 }
